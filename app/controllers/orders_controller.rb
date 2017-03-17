@@ -54,6 +54,7 @@ class OrdersController < ApplicationController
       end
     end
     order.save!
+    ApplicationMailer.order_email(order, User.find(session[:user_id])).deliver_now
     order
   end
 
