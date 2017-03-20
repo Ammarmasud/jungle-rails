@@ -143,19 +143,19 @@ Review.destroy_all
 
 p1.reviews.create!({
   user_id: 1,
-  description: "I tried to use it then my girlfriend broke up with me, would not recommend.",
+  description: "Can't pull this off the same way the invisible model can. I don't think I have the right skin tone for it.",
   rating: 2
 })
 
 p2.reviews.create!({
   user_id: 1,
-  description: "I tried to use it then I got the flu, would not recommend.",
+  description: "Thought as a man I could pull this off too...I was wrong.",
   rating: 1
 })
 
 p3.reviews.create!({
   user_id: 1,
-  description: "The equivalent of an orgasm, but cheaper.",
+  description: "Directions were a little confusing but what do you expect for such a good price.",
   rating: 4
 })
 
