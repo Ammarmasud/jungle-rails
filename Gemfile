@@ -58,4 +58,9 @@ end
 group :production do
   gem 'newrelic_rpm'
   gem 'rails_12factor'
+  gem 'pg'
 end
+
+# Windows does not include zoneinfo files, so bundle the tzinfo-data gem
+gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+

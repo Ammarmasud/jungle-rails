@@ -9,7 +9,7 @@ class ReviewsController < ApplicationController
     @review.product_id = params.require(:product_id)
     @review.user_id = session[:user_id]
     if @review.save
-      redirect_to [:products]
+      redirect_to [:products], notice: 'Review creted!'
     else
       render :new
     end

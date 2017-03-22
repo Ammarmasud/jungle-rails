@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
       redirect_to '/'
     else
       # failure, render login form
-      redirect_to '/login', error 'User could not be authenticated'
+      redirect_to '/login', error: 'User could not be authenticated'
     end
 
   end
