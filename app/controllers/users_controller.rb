@@ -4,11 +4,13 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
+    @user.email = @user.email.downcase
+    # if !(User.find_by_email(@user.email)) && @user.save
     if @user.save
       session[:user_id] = @user.id
       redirect_to '/'
     else
-      redirect_to '/signup'
+      redirect_to '/signup', error: "signup error"
     end
   end
 
